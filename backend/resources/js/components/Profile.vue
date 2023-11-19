@@ -155,4 +155,16 @@ export default {
   }
 }
 
+@media screen and (max-width: 780px) {
+  .main-register {
+    height: 100%;
+
+    .main-exchange-table {
+      text-align: center;
+      height: auto;
+      min-height: 350px;
+      width: 90%;
+    }
+  }
+}
 </style>

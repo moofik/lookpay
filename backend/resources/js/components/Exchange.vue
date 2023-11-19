@@ -508,7 +508,7 @@ export default {
     .main-exchange-form {
       margin-top: 30px;
       width: 80%;
-
+      height: auto;
 
       h1 {
         color: #e76912;
@@ -521,6 +521,18 @@ export default {
       .register-button {
         padding: 0.5rem;
       }
+    }
+  }
+
+  .fields_container {
+    flex-direction: column;
+  }
+
+  .amts_container, .login_pass_container, .to_cur_container, .from_cur_container {
+    width: 100%;
+
+    &.logged_in {
+      width: 100% !important;
     }
   }
 }
