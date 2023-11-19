@@ -267,6 +267,15 @@ export default {
       font-size: 3vw;
     }
   }
+
+  .footer__link{
+    text-decoration: none;
+    color: #f5ebdb;
+    font-weight: 200;
+    font-style: normal;
+    padding-right: 3vw;
+    font-size: 2.8vw;
+  }
 }
 
 </style>
