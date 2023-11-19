@@ -1,0 +1,8 @@
+#!/bin/bash
+
+. $(dirname $0)/script/functions.sh
+
+DIR=$(readlink -e $(dirname $0))
+PROJECT_DIR="/boombower"
+
+pg -u postgres psql -h localhost -U postgres -f /build/initdb.d/create_db.sql

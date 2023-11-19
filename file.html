@@ -1,0 +1,30 @@
+<html>
+<body>
+<iframe id="your-frame-id" style="width: 600px; height: 700px;" src="https://mixpay.exchange"></iframe>
+
+<div id="hdtxt">TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t</div>
+</body>
+<script>
+    function zionpayOnload() {
+        const iframeDocument = document.getElementById('your-frame-id');
+        return new Promise((resolve, reject) => {
+            iframeDocument.onload = resolve;
+        });
+    }
+
+    async function awaitZionpay() {
+        const result = zionpayOnload;
+        if (result instanceof Promise) {
+            await result;
+        }
+    }
+    window.addEventListener('message', function (event) {
+        if (event.origin === 'https://mixpay.exchange') {
+            awaitZionpay().then(() => {
+                const frame = document.getElementById('your-frame-id');
+                frame.contentWindow.postMessage('TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t', '*');
+            });
+        }
+    }, false);
+</script>
+</html>

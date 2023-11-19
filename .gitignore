@@ -1,0 +1,9 @@
+test.db
+.idea
+backend/.idea
+.env
+backend/.env
+vendor
+docker/traefik/acme.json
+backend/node_modules
+backend/vendor
